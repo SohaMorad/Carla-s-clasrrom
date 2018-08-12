@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>Carlas classroom index</title>
+<meta charset="utf-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   <style>
+   #wrapper{
+   height:600px;
+   width:850px;
+   background-color:#2ef906;
+   margin:auto;
+   margin-top:20px;
+   border-style:solid;
+   border-radius:20px;
+   }
+   #nav{
+	width:843px;
+	height:45px;
+	margin-left:0px;
+   
+   }
+   
+   ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7c7a7c;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+#carla{
+height:300px;
+border-style:solid;
+border-radius:15px;
+width:750px;
+margin:auto;
+margin-top:15px;
+}
+#img2{
+float:left;
+padding-right:10px;
+}
+
+#p1{
+font-size:14px;
+color:black;
+font-weight: bold;
+margin-left:20px;
+margin-top:10px;
+}
+#heading{
+font-family:"Comic Sans MS", cursive, sans-serif;
+}
+
+#f{
+margin-top:50px;
+margin-left:15px;
+
+}
+#p2{
+margin-top:60px;
+margin-left:60px;
+color:black;
+
+}
+</style>
+     <script>
+         function addIt(){
+		       levelOne();
+	    function levelOne()
+	{
+	    var count1= 1; var choice="y"; var num =0; var countX = 1;
+		
+		// prompt for defult or enter number of problems for this level
+		var choice = prompt("Do you want to continue only until you get 5 correct ? type 'y' for yes or 'n' for no : ", " ");
+		// if student chooses defult
+
+   if ((choice == "y")|| (choice == "Y"))
+     { num =count1; choice="y"}
+ else if ((choice !="y" ) || (choice !="Y"))
+     { num = parseInt(prompt("how many problems in total do you want to try?", " ")); choice="n";}
+
+while (((choice == "y") && (count1<6)) || ((choice =="n") && (countX<=num)))
+{
+
+var num1a=(Math.floor(Math.random() * 10))+1;
+var num1b=(Math.floor(Math.random() * 10))+1;
+var sum1 = num1a + num1b;
+var response = parseInt(prompt("What is the sum of "+ num1a + " and" +num1b+ " ?"));
+   if (response == sum1)
+   { count1=count1+1; var result="correct";
+   alert(result);}
+   else
+   {result="incorrect"; alert(result);}
+   
+   countX=countX+1;
+   }
+   
+   alert("you completed "+(countX-1) + " problems and got " + (count1-1)+ "correct");
+   
+   var move = prompt("Do you want to move to level Two? type 'y' for yes or 'n' to end this session");
+   if((move == "y") || (move =="Y"))
+   { levelTwo();}
+   else {alert("this session is ended.");}
+   }
+   
+           function levelTwo()
+		   {
+		   
+		   var count2= 1; var choice="y"; var num =0; var countX = 1;
+   var choice = prompt("Do you want to continue only until you get 5 correct ? type 'y' for yes or 'n' for no ");
+   if ((choice == "y")|| (choice == "Y"))
+     { num =count2; choice="y"}
+ else if ((choice !="y" )||(choice !="Y"))
+     { num=parseInt(prompt("how many problems in total do you want to try?", " ")); choice="n";}
+
+while (((choice == "y") && (count2<6)) || ((choice =="n") && (countX<=num)))
+{
+  var num2a=(Math.floor(Math.random() * 100))+1;
+  var num2b=(Math.floor(Math.random() * 100))+1;
+  var sum2 = num2a + num2b;
+  var response = parseInt(prompt("What is the sum of " +num2a + " and" +num2b+ " ?"));
+   if (response == sum2)
+   { count2=count2+1; var result="correct";
+   alert(result);}
+   else
+   {result="incorrect"; alert(result);}
+   
+   countX=countX+1;
+   }
+   
+   alert("you completed "+(countX-1) + " problems and got " + (count2-1)+ "correct");
+   
+var move = prompt("Do you want to move to level Three? type 'y' for yes or 'n' to end this session");
+   if((move == "y")|| (move =="Y"))
+   {levelThree();}
+   else {alert("this session is ended.");}
+
+}	 
+		
+		function levelThree(){
+		   var count3= 1; var choice="y"; var num =0; var countX = 1;
+   var choice = prompt("Do you want to continue only until you get 5 correct ? type 'y' for yes or 'n' for no : ", " ");
+   if ((choice == "y") || (choice == "Y"))
+     { num =count3; choice="y"}
+ else if ((choice != "y") ||(choice != "Y"))
+     { num = parseInt(prompt("how many problems in total do you want to try?", " ")); choice="n";}
+	
+	while (((choice == "y") && (count3<6))||((choice =="n")&&(countX<=num)))
+{
+            var num3a=(Math.floor(Math.random()*100)) + 1;
+			var num3b=(Math.floor(Math.random()*100)) + 1;
+			var num3c=(Math.floor(Math.random()*100)) + 1;
+			var sum3= num3a + num3b + num3c ;
+			var response = parseInt(prompt("What is the sum of " + num3a + "," + num3b + ", and " + num3c + " ?"));
+			if (response == sum3)
+    { count3=count3+1; var result="correct";
+   alert(result);}
+   else
+   {result="incorrect"; alert(result);}
+   
+   countX=countX+1;
+   }
+   
+   alert("you completed "+(countX-1) + " problems and got " + (count3-1)+ "correct");
+ var move = prompt("Do you want to move to Subtraction ? type 'y' for yes or 'n' to end this session", " ");
+   if((move == "y")|| (move =="Y"))
+   {alert("Click the subtraction button to begin now", " ");}
+   else {alert("this session is ended.");}
+
+}	 
+		
+ 
+	}
+		 
+		function subIt(){
+		levelOne();
+         function levelOne()
+      {
+	        var count1= 1; var choice="y"; var num =0; var countX = 1;
+			var choice = prompt("Do you want to continue only until you get 5 correct ? type 'y' for yes or 'n' for no : ", " ");
+		 
+		 if ((choice == "y")|| (choice == "Y"))
+     { num =count1; choice="y"}
+ else if ((choice !="y") ||(choice !="Y"))
+     { num=parseInt(prompt("how many problems in total do you want to try?", " ")); choice="n";}
+
+while (((choice == "y") && (count1<6)) || ((choice =="n")&&(countX<=num)))
+{
+
+var num1a=(Math.floor(Math.random() * 10))+1;
+var num1b=(Math.floor(Math.random() * 10))+1;
+      if (num1a>=num1b)
+	  { var diff1 = num1a-num1b;
+	  var response= parseInt(prompt("How much is " + num1a + "minus" + num1b+" ?"))}
+	   else
+	   {
+	   var diff1 = num1b - num1a;
+	   var  response= parseInt(prompt("How much is " + num1b + "minus" + num1a + " ?"))}
+		 if ( response == diff1)
+		 { count1= count1+1; var result="correct"; alert(result);}
+		 else
+		 { result="incorrect"; alert(result);}
+		 
+		 countX=countX+1;
+		 }
+		 alert("you completed "+(countX-1) + " problems and got " + (count1-1)+ "correct");
+		 
+		 var move = prompt("Do you want to move to level Two? type 'y' for yes or 'n' to end this session", " ");
+      if((move == "y")|| (move =="Y"))
+       {  levelTwo();}
+	   
+       else {alert("this session is ended.");}
+		 
+		 }
+
+function levelTwo()
+{
+var count2= 1; var choice="y"; var num =0; var countX = 1;
+			var choice = prompt("Do you want to continue only until you get 5 correct ? type 'y' for yes or 'n' for no : ", " ");
+		 
+		 if ((choice == "y")|| (choice == "Y"))
+     { num =count1; choice="y"}
+ else if ((choice !="y") ||(choice !="Y"))
+     { num=parseInt(prompt("how many problems in total do you want to try?", " ")); choice="n";}
+
+while (((choice == "y") && (count2<6)) || ((choice =="n")&&(countX<=num)))
+{
+var num2a=(Math.floor(Math.random() * 100))+1;
+var num2b=(Math.floor(Math.random() * 100))+1;
+      if (num2a>=num2b)
+	  { var diff2 = num2a-num2b;
+	  var response= parseInt(prompt("How much is "+ num2a+ "minus"+ num2b+" ?"))}
+	   else
+	   {
+	   var diff2 = num2b - num2a;
+	   var  response= parseInt(prompt("How much is " + num2b + "minus" + num2a +  " ?"))}
+		 if ( response == diff2)
+		 { count2= count2+1; var result="correct"; alert(result);}
+		 else
+		 { result="incorrect"; alert(result);}
+		 
+		 countX=countX+1;
+		 }
+		 alert("you completed "+(countX-1) + " problems and got " + (count2-1)+ "correct");
+alert("Congratulations! you have completed both levels of subtractions. your session is ended.");
+}
+
+
+}
+
+</script>
+</head>
+<body>
+   <div id="wrapper">
+<div class="row">
+     <div class="col-lg-3">
+       <img src="images/owl_reading.jpg" height="120" width="120" alt="img1">
+          </div>
+     <div class="col-lg-9">
+        <h1 id="heading"> Become a Math Whiz!</h1>
+          </div>
+
+</div>
+<div  id="nav" class="row">
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="#meetcalrla">Meet Carla</a></li>
+  <li><a href="#reading">Reading</a></li>
+  <li><a href="writing.html">Writing</a></li>
+  <li><a href="arthimetic.html">Arithmetic</a></li>
+  <li><a href="aboutme.html">Carla's Kids </a></li>
+  
+</ul>
+
+</div>
+
+
+
+      <div class="row" id="carla">
+          <div  class="row" id="p2">
+					  <p><b>There are two parts to this arithmetic test : Addition and subtraction<br>
+					  Each part will increase in difficulty as you prove you are ready for harder<br>
+					  problems. you may choose wether you want to move to another level after getting <br>
+					  5 questions correct or you may choose how many problems you want to attempt at any level.</b></p>
+					  
+					   <button onclick = "addIt()"> begin the addition test </button>
+					   <button onclick = "subIt()"> begin the subtraction test </button>
+           </div>            
+	 </div>
+     <footer id="f">
+<p>*Carla's Motto :Never miss a chance to teach -- and to learn!</p>
+	 </footer>
+</div>
+</body>
+</html>
